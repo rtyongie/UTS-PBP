@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Strawberry Matcha Wedding</title>
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+        rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
+        rel="stylesheet">
+
+  <style>
+    :root {
+      --pink: #f7dce4;
+      --pink-dark: #bd7187;
+      --green: #dce8c9;
+      --green-dark: #526847;
+      --cream: #fffaf3;
+    }
+
+    * {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: 'DM Sans', sans-serif;
+      background: var(--cream);
+      color: #4b5041;
+    }
+
+    h1, h2, h3, .script {
+      font-family: 'Playfair Display', serif;
+    }
+
+    .hero {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 40px 20px;
+      background:
+        linear-gradient(rgba(255,250,243,.35), rgba(255,250,243,.7)),
+        url('pinkijo.jpg') center/cover;
+    }
+
+    .hero-card {
+      max-width: 650px;
+      width: 100%;
+      padding: 45px 25px;
+      background: rgba(255, 250, 243, .91);
+      border: 1px solid white;
+      border-radius: 180px 180px 25px 25px;
+      box-shadow: 0 15px 40px #69564020;
+      animation: muncul 1.2s ease;
+    }
+
+    .eyebrow {
+      color: var(--pink-dark);
+      letter-spacing: 4px;
+      font-size: .75rem;
+      text-transform: uppercase;
+    }
+
+    .hero h1 {
+      color: var(--green-dark);
+      font-size: clamp(2.8rem, 8vw, 5rem);
+      margin: 20px 0;
+    }
+
+    .btn-pink {
+      background: var(--pink-dark);
+      color: white;
+      border: none;
+      border-radius: 30px;
+      padding: 12px 25px;
+    }
+
+    .btn-pink:hover {
+      background: #a75b72;
+      color: white;
+    }
+
+    .section {
+      padding: 85px 20px;
+      text-align: center;
+    }
+
+    .pink-section {
+      background: var(--pink);
+    }
+
+    .green-section {
+      background: var(--green);
+    }
+
+    .section-title {
+      color: var(--green-dark);
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .divider {
+      width: 65px;
+      height: 3px;
+      background: var(--pink-dark);
+      margin: 20px auto;
+      border-radius: 5px;
+    }
+
+    .couple-card {
+      background: var(--cream);
+      border-radius: 100px 100px 20px 20px;
+      padding: 25px;
+      height: 100%;
+    }
+
+    .couple-card img {
+      width: 180px;
+      height: 180px;
+      max-width: 100%;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 6px solid var(--pink);
+      margin-bottom: 20px;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .time-box {
+      background: var(--cream);
+      border-radius: 15px;
+      padding: 15px;
+      min-width: 75px;
+      box-shadow: 0 5px 15px #52684715;
+    }
+
+    .time-box strong {
+      display: block;
+      font-size: 1.8rem;
+      color: var(--pink-dark);
+    }
+
+    .event-card {
+      background: var(--cream);
+      padding: 30px 20px;
+      border-radius: 20px;
+      height: 100%;
+      border: 1px solid #e7e6d9;
+    }
+
+    .gallery-img {
+      width: 100%;
+      height: 260px;
+      object-fit: cover;
+      border-radius: 18px;
+      transition: transform .3s;
+    }
+
+    .gallery-img:hover {
+      transform: translateY(-5px);
+    }
+
+    footer {
+      background: var(--green-dark);
+      color: white;
+      text-align: center;
+      padding: 30px 15px;
+    }
+
+    #undangan {
+      display: none;
+    }
+
+    @keyframes muncul {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 576px) {
+      .hero-card {
+        padding: 40px 18px;
+      }
+
+      .section {
+        padding: 65px 18px;
+      }
+
+      .gallery-img {
+        height: 220px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HALAMAN PEMBUKA -->
+  <section class="hero" id="pembuka">
+    <div class="hero-card">
+      <p class="eyebrow">The Wedding Invitation</p>
+
+      <div style="font-size: 2rem;">🍓 🍵</div>
+
+      <h3 style="color: var(--pink-dark);">
+        Undangan Pernikahan
+      </h3>
+
+      <h1>Strawberry<br>& Matcha</h1>
+
+      <p class="mb-2">2 rasa menjadi 1</p>
+
+      <div class="divider"></div>
+
+      <p>Kamis, 29 Oktober 2026</p>
+
+      <button class="btn btn-pink mt-3"
+              onclick="bukaUndangan()">
+        Buka Undangan &lt;3
+      </button>
+
+      <p class="mt-3 mb-0 small">
+        Kepada Yth. Bapak/Ibu/Saudara/i
+      </p>
+
+      <p class="mb-0">matcha lovers</p>
+      <p class="mt-1 mb-0 small">di tempat</p>
+    </div>
+  </section>
+
+  <!-- ISI UNDANGAN -->
+  <main id="undangan">
+
+    <!-- SALAM PEMBUKA -->
+    <section class="section">
+      <div class="container">
+        <div style="font-size: 2rem; margin-top: 25px;">
+          🍓🌿🍵
+        </div>
+
+        <h2 class="section-title">Assalamu'alaikum</h2>
+
+        <div class="divider"></div>
+
+        <p class="mx-auto" style="max-width: 650px;">
+          Dengan memohon rahmat dan ridho Allah SWT,
+          kami bermaksud mengundang Bapak/Ibu/Saudara/i
+          untuk menghadiri acara pernikahan kami.
+          Merupakan kebahagiaan bagi kami apabila
+          Anda berkenan hadir dan memberikan doa restu.
+        </p>
+
+        <div style="font-size: 2rem; margin-top: 25px;">
+          🍓 🌿 🍵
+        </div>
+      </div>
+    </section>
+
+    <!-- MEMPELAI -->
+    <section class="section pink-section">
+      <div class="container">
+        <h2 class="section-title">Kedua Mempelai</h2>
+
+        <div class="divider"></div>
+
+        <div class="row g-4 justify-content-center mt-3">
+          <div class="col-md-5">
+            <div class="couple-card">
+              <img src="stb.jpg" alt="Foto Strawberry">
+              <h2>Strawberry</h2>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="couple-card">
+              <img src="matcha.jpg" alt="Foto Matcha">
+              <h2>Matcha</h2>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COUNTDOWN -->
+    <section class="section green-section">
+      <div class="container">
+        <p class="eyebrow">Save The Date</p>
+
+        <h2 class="section-title">Counting Down to Forever</h2>
+
+        <div class="countdown">
+          <div class="time-box">
+            <strong id="hari">00</strong>
+            <span>Hari</span>
+          </div>
+
+          <div class="time-box">
+            <strong id="jam">00</strong>
+            <span>Jam</span>
+          </div>
+
+          <div class="time-box">
+            <strong id="menit">00</strong>
+            <span>Menit</span>
+          </div>
+
+          <div class="time-box">
+            <strong id="detik">00</strong>
+            <span>Detik</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ACARA -->
+    <section class="section">
+      <div class="container">
+        <p class="eyebrow">Join Our Special Day</p>
+
+        <h2 class="section-title">Detail Acara</h2>
+
+        <div class="divider"></div>
+
+        <div class="row g-4 justify-content-center mt-3">
+          <div class="col-md-5">
+            <div class="event-card">
+              <div style="font-size: 2.5rem;">🍓</div>
+
+              <h3 class="mt-3">Akad Nikah</h3>
+              <p>Kamis, 29 Oktober 2026</p>
+              <p>08.00 – 10.00 WIB</p>
+              <p>Jambangan Tama V, Surabaya</p>
+            </div>
+          </div>
+
+          <div class="col-md-5">
+            <div class="event-card">
+              <div style="font-size: 2.5rem;">🍵</div>
+
+              <h3 class="mt-3">Resepsi</h3>
+              <p>Kamis, 29 Oktober 2026</p>
+              <p>11.00 – 14.00 WIB</p>
+              <p>Jambangan Tama V, Surabaya</p>
+            </div>
+          </div>
+        </div>
+
+        <a href="https://maps.app.goo.gl/YuE9RpvY5g8cJVWu6"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-pink mt-4">
+          📍 Lihat Lokasi
+        </a>
+      </div>
+    </section>
+
+    <!-- GALERI -->
+    <section class="section pink-section">
+      <div class="container">
+        <p class="eyebrow">Our Little Moments</p>
+
+        <h2 class="section-title">Our Gallery</h2>
+
+        <div class="divider"></div>
+
+        <div class="row g-3 mt-3">
+          <div class="col-6 col-md-4">
+            <img class="gallery-img" src="1.jpg" alt="Galeri 1">
+          </div>
+
+          <div class="col-6 col-md-4">
+            <img class="gallery-img" src="4.jpg" alt="Galeri 2">
+          </div>
+
+          <div class="col-6 col-md-4">
+            <img class="gallery-img" src="3.jpg" alt="Galeri 3">
+          </div>
+
+          <div class="col-6 col-md-4">
+            <img class="gallery-img" src="2.jpg" alt="Galeri 4">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PENUTUP -->
+    <section class="section">
+      <div class="container">
+        <div style="font-size: 2.5rem;">🍓 🍵</div>
+
+        <h2 class="section-title">Thank You!</h2>
+
+        <p class="mx-auto" style="max-width: 550px;">
+          Terima kasih atas doa dan kasih sayang yang diberikan.
+          Semoga kebahagiaan selalu menyertai kita semua.
+        </p>
+
+        <h2 class="mt-4" style="color: var(--pink-dark);">
+          Strawberry & Matcha
+        </h2>
+
+        <p>With love, forever and always &lt;3</p>
+
+        <button class="btn btn-pink mt-3"
+                onclick="window.scrollTo({top: 0, behavior: 'smooth'})">
+          ↑ Kembali ke Atas
+        </button>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <p class="mb-1">🍓 Strawberry Matcha Wedding 🍵</p>
+    <small>Made with love &lt;3</small>
+  </footer>
+
+  <script>
+    // Membuka undangan
+    function bukaUndangan() {
+      document.getElementById("undangan").style.display = "block";
+
+      document.getElementById("undangan").scrollIntoView({
+        behavior: "smooth"
+      });
+    }
+
+    // Countdown menuju hari pernikahan
+    // Format: Tahun, Bulan (0 = Januari), Tanggal, Jam
+    const tanggalPernikahan = new Date(2026, 9, 29, 8, 0, 0);
+
+    function updateCountdown() {
+      const sekarang = new Date();
+      const selisih = tanggalPernikahan - sekarang;
+
+      if (selisih <= 0) {
+        ["hari", "jam", "menit", "detik"].forEach(id => {
+          document.getElementById(id).textContent = "00";
+        });
+        return;
+      }
+
+      document.getElementById("hari").textContent =
+        Math.floor(selisih / (1000 * 60 * 60 * 24));
+
+      document.getElementById("jam").textContent =
+        Math.floor((selisih / (1000 * 60 * 60)) % 24);
+
+      document.getElementById("menit").textContent =
+        Math.floor((selisih / (1000 * 60)) % 60);
+
+      document.getElementById("detik").textContent =
+        Math.floor((selisih / 1000) % 60);
+    }
+
+    updateCountdown();
+    setInterval(updateCountdown, 1000);
+  </script>
+
+</body>
+</html>
